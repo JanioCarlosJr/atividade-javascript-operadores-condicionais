@@ -92,7 +92,7 @@ let tokenDigitado = "123";
 let tokenValido = 123;
 
 const testeSeguranca = (tokenDigitado === tokenValido);
-console.log(testeSeguranca)
+console.log(`Teste de Segurança = ${testeSeguranca}`)
 
 
 // =============================================================================
@@ -135,7 +135,6 @@ switch (statusPedido) {
 
 }
 
-
 // =============================================================================
 // ATIVIDADE 4: PAR/ÍMPAR E ESTOQUE COM OPERADOR TERNÁRIO (? :)
 // =============================================================================
@@ -158,8 +157,15 @@ console.log("--- Atividade 4: Operador Ternário & Módulo ---");
 
 // TODO: Escreva seu código da Atividade 4 abaixo:
 
+// PARTE A
+let numero = 18;
+let tipoNumero = numero % 2 === 0 ? "PAR" : "IMPAR";
+console.log(`O número ${numero} é classificado como ${tipoNumero}.`)
 
-
+// PARTE B
+const quantidadeEstoque = 0;
+let avisoEstoque = quantidadeEstoque > 0 ? "✅ Em Estoque" : "❌ Esgotado";
+console.log(`Disponibilidade do Produto: ${avisoEstoque}.`)
 
 
 console.log("=== FIM DA ATIVIDADE 20 ===");
