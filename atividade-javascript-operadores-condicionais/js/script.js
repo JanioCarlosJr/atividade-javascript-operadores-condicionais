@@ -48,7 +48,6 @@ if (valorCompra <= 100) {
     console.log("Compra: R$", valorCompra.toFixed(2), " | Desconto: R$", valorDesconto.toFixed(2), " | Total a Pagar: R$: ", valorFinal.toFixed(2),);
 }
 
-
 // =============================================================================
 // ATIVIDADE 2: VALIDADOR DE ACESSO AO PAINEL (&&, || E ===)
 // =============================================================================
@@ -73,7 +72,20 @@ console.log("--- Atividade 2: Validador de Acesso ---");
 
 // TODO: Escreva seu código da Atividade 2 abaixo:
 
+let usuarioLogado = true;
+let idadeUsuario = 20;
+let perfilUsuario = "ADMIN"
 
+let temPermissao = (perfilUsuario === "ADMIN" || perfilUsuario === "GERENTE");
+
+const acesso = (usuarioLogado === true && idadeUsuario >= 18 && (perfilUsuario === "GERENTE" || perfilUsuario === "ADMIN"));
+
+if (acesso === true) {
+    console.log("🔓 Acesso Autorizado ao Painel Administrativo!");}
+
+else {
+    console.log("🔒 Acesso Negado: Credenciais ou idade insuficientes.");
+}
 
 
 
