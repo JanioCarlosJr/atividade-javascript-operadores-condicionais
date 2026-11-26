@@ -6,7 +6,6 @@
 
 console.log("=== INÍCIO DA ATIVIDADE 20: OPERADORES E CONDICIONAIS ===");
 
-
 // =============================================================================
 // ATIVIDADE 1: CALCULADORA DE DESCONTO PROGRESSIVO (IF / ELSE IF / ELSE)
 // =============================================================================
@@ -86,8 +85,6 @@ if (acesso === true) {
 else {
     console.log("🔒 Acesso Negado: Credenciais ou idade insuficientes.");
 }
-
-
 
 // =============================================================================
 // ATIVIDADE 3: RASTREADOR DE STATUS DE PEDIDO (SWITCH / CASE)
