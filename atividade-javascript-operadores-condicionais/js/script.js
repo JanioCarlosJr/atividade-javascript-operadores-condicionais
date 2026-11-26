@@ -30,7 +30,7 @@ console.log("--- Atividade 1: Desconto Progressivo ---");
 
 let valorCompra = 250;
 let porcentagemDesconto = 0;
- 
+
 if (valorCompra <= 100) {
     let valorDesconto = valorCompra * porcentagemDesconto;
     let valorFinal = valorCompra - valorDesconto;
@@ -80,11 +80,20 @@ let temPermissao = (perfilUsuario === "ADMIN" || perfilUsuario === "GERENTE");
 const acesso = (usuarioLogado === true && idadeUsuario >= 18 && (perfilUsuario === "GERENTE" || perfilUsuario === "ADMIN"));
 
 if (acesso === true) {
-    console.log("🔓 Acesso Autorizado ao Painel Administrativo!");}
+    console.log("🔓 Acesso Autorizado ao Painel Administrativo!");
+}
 
 else {
     console.log("🔒 Acesso Negado: Credenciais ou idade insuficientes.");
 }
+
+// Teste de Segurança
+let tokenDigitado = "123";
+let tokenValido = 123;
+
+const testeSeguranca = (tokenDigitado === tokenValido);
+console.log(testeSeguranca)
+
 
 // =============================================================================
 // ATIVIDADE 3: RASTREADOR DE STATUS DE PEDIDO (SWITCH / CASE)
@@ -106,8 +115,25 @@ console.log("--- Atividade 3: Rastreamento com Switch ---");
 
 // TODO: Escreva seu código da Atividade 3 abaixo:
 
+let statusPedido = "ENVIADO";
 
+switch (statusPedido) {
+    case "CRIADO":
+        console.log("📝 Pedido recebido! Aguardando confirmação de pagamento.")
+        break;
+    case "PAGO":
+        console.log("💳 Pagamento confirmado! Produto sendo embalado.")
+        break;
+    case "ENVIADO":
+        console.log("🚚 Pedido em transporte! A caminho do seu endereço.")
+        break;
+    case "ENTREGUE":
+        console.log("📦 Pedido entregue com sucesso! Aproveite sua compra.")
+        break;
+    default:
+        console.log("❓ Status desconhecido. Por favor, contate o suporte.")    
 
+}
 
 
 // =============================================================================
